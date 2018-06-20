@@ -1,36 +1,13 @@
 <nav class="navbar navbar-dark bg-dark">
-
+    <a class="navbar-brand">{{nav_header}}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-        {{nav_header}}
     </button>
-
-    <div class="collapse navbar-collapse" id="navbarText">
+      <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item" *ngFor="let item of items" >
               <a class="nav-link" href="#">{{item}}</a>
           </li>
-          <!--li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Tests</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#">Doctors</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#">Appointments</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#">News</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#">Contact us</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#">Follow us</a>
-          </li-->
         </ul>
       </div>
 </nav>

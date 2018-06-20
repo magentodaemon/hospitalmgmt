@@ -5,5 +5,6 @@ export const navitems = [
 'Appointments',
 'News',
 'Contact us',
-'Follow us'
+'Follow us',
+'My Account'
 ]
