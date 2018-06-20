@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {navitems} from './navitems';
 
 @Component({
   selector: 'app-header',
@@ -13,6 +14,6 @@ export class HeaderComponent implements OnInit {
   }
 
   nav_header = 'Vcare Polyclinics and Diagnoistic Center'
-
+  items = navitems
 
 }
