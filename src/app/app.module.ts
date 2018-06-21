@@ -1,10 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { complist} from './complist';
-import { routelist } from './routelist';
+import { complist} from './includes/complist';
+import { routelist } from './includes/routelist';
 
 const appRoutes: Routes = routelist;
 
@@ -14,9 +15,10 @@ const appRoutes: Routes = routelist;
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
+      { enableTracing: false } // <-- debugging purposes only
     )
   ],
   providers: [],
