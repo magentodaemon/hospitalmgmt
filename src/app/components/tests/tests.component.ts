@@ -14,10 +14,25 @@ export class TestsComponent implements OnInit {
   private nextPage;
   private previousPage;
 
-  constructor(private testService: TestService) { this.testService = testService; }
+  constructor(private tstService: TestService) { this.testService = tstService; }
 
   ngOnInit() {
-    this.testService.getTests().subscribe((data)=> {console.log(data);this.tests = data.tests; this.nextPage = data.next; this.previousPage = data.previous;});
+    this.testService.getTests().subscribe((data)=> {
+        this.tests = data.tests;
+        this.nextPage = data.next ? data.currentPage++ : false;
+        this.previousPage = data.previous ? data.currentPage-- : false;
+      }
+    );
+  }
+
+  search(searchString, pageNumber = '1'){
+
+    this.testService.getTests(pageNumber , searchString).subscribe(
+      (data)=> {
+       this.tests = data.tests;
+       this.nextPage = data.next ? data.currentPage++ : false;
+       this.previousPage = data.previous ? data.currentPage-- : false;
+    });
   }
 
 }

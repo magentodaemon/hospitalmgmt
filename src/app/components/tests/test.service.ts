@@ -8,7 +8,7 @@ export class TestService {
 
   configUrl = 'http://localhost/healtcareapi/mockdata/tests.php';
 
-  getTests() {
-    return this.http.get(this.configUrl);
+  getTests(pageNumber : string = '1', searchString : string = '') {
+    return this.http.get(this.configUrl + '?page='+ pageNumber + '&search=' + searchString);
   }
 }
